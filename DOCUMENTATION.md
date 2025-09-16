@@ -34,7 +34,7 @@ The system embeds text messages into MP4 video files using:
 
 ## Technical Approach
 
-### Embedding Algorithm (Based on Algorithm 3 from Paper)
+### Embedding Algorithm 
 
 1. **Frame Processing**: Extract frames from input video
 2. **Motion Detection**: Compare consecutive frames to find motion blocks
@@ -43,7 +43,7 @@ The system embeds text messages into MP4 video files using:
 5. **Embedding**: Modify coefficients using psychovisual thresholds
 6. **Reconstruction**: Apply inverse DCT and rebuild video
 
-### Extraction Algorithm (Based on Algorithm 4 from Paper)
+### Extraction Algorithm 
 
 1. **Frame Extraction**: Extract frames from stego video
 2. **Motion Detection**: Use same motion detection as embedding
@@ -78,9 +78,7 @@ if message_bit == 1:
 pip install numpy scipy pillow
 ```
 
-### FFmpeg Installation
-- **Ubuntu/Debian**: `sudo apt install ffmpeg`
-- **macOS**: `brew install ffmpeg`  
+### FFmpeg Installation  
 - **Windows**: Download from https://ffmpeg.org/
 
 ## Usage Examples
@@ -184,20 +182,6 @@ stego.embed_message(input_video, message, output_video, verbose=True)
 extracted = stego.extract_message(stego_video, max_frames=None, debug=True)
 ```
 
-## Research Paper Reference
-
-This implementation is based on:
-
-**"Video steganography based on DCT psychovisual and object motion"**  
-Authors: Muhammad Fuad, Ferda Ernawan  
-Published: Bulletin of Electrical Engineering and Informatics, Vol. 9, No. 3, June 2020  
-DOI: 10.11591/eei.v9i3.1859
-
-### Key Contributions from Paper:
-- Novel combination of DCT psychovisual effects and object motion
-- Selection of optimal DCT coefficients for robustness
-- Resistance against MPEG compression attacks
-- Minimal perceptual distortion to human visual system
 
 ## Algorithm Complexity
 
@@ -228,33 +212,3 @@ DOI: 10.11591/eei.v9i3.1859
 - Lower thresholds = higher quality but less robust
 - Optimal threshold: 20 (from research paper validation)
 
-## Future Enhancements
-
-### Possible Improvements
-- **Color Channel Support**: Currently uses grayscale only
-- **Adaptive Thresholds**: Dynamic threshold based on content
-- **Error Correction**: Reed-Solomon codes for better robustness
-- **Multi-layer Embedding**: Hierarchical message embedding
-- **Real-time Processing**: Streaming video support
-
-### Research Extensions
-- Deep learning-based motion detection
-- Content-adaptive psychovisual modeling
-- Cross-codec robustness testing
-- Perceptual quality optimization
-
-## License and Citation
-
-This implementation is provided for research and educational purposes. If you use this code in academic work, please cite the original research paper:
-
-```bibtex
-@article{fuad2020video,
-  title={Video steganography based on DCT psychovisual and object motion},
-  author={Fuad, Muhammad and Ernawan, Ferda},
-  journal={Bulletin of Electrical Engineering and Informatics},
-  volume={9},
-  number={3},
-  pages={1015--1023},
-  year={2020}
-}
-```
