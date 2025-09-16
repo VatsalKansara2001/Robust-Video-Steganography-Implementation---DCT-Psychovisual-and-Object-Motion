@@ -65,6 +65,19 @@ if message_bit == 1:
         D[pos1], D[pos2] = D[pos2] + s, D[pos1]
     else:
         D[pos1] = D[pos1] + f
+
+
+# Coefficient comparison for bit extraction
+if D[pos1] < D[pos2]:
+    extracted_bits += '1'
+else:
+    extracted_bits += '0'
+
+# Motion vector magnitude calculation  
+diff = block1 - block2
+motion_magnitude = np.sqrt(np.sum(diff**2))
+if motion_magnitude <= self.motion_threshold:
+    motion_blocks.append((i, j))
 ```
 
 ## Installation and Requirements
