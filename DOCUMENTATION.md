@@ -195,12 +195,8 @@ extracted = stego.extract_message(stego_video, max_frames=None, debug=True)
 - **Temporary Storage**: 2-3× input video size during processing
 - **Output**: Similar size to input video
 
-## Security Considerations
 
-### Message Security
-- Messages are embedded in binary form without encryption
-- Consider encrypting sensitive messages before embedding
-- Use strong passwords for any encryption layer
+## Security Considerations
 
 ### Detection Resistance
 - DCT-based approach resists statistical attacks
