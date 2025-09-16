@@ -22,14 +22,13 @@ Unlike traditional LSB steganography that fails under compression, this method:
 ## 📁 Project Files
 
 ### Core Implementation
-- **`robust_video_steganography.py`** - Complete implementation (22KB)
-- **`example_usage.py`** - Demo script and examples (8KB)
-- **`DOCUMENTATION.md`** - Comprehensive technical documentation
+- **`robust_video_steganography.py`** 
+- **`example_usage.py`** 
+- **`DOCUMENTATION.md`** 
 
 ### Documentation
-- **`README.md`** - This overview file
-- **Algorithm flowchart** - Visual representation of the process
-
+- **`README.md`** 
+- **Algorithm flowchart** 
 ## 🚀 Quick Start
 
 ### 1. Install Dependencies
@@ -38,8 +37,7 @@ Unlike traditional LSB steganography that fails under compression, this method:
 pip install numpy scipy pillow
 
 # System requirement: FFmpeg
-sudo apt install ffmpeg  # Ubuntu/Debian
-brew install ffmpeg       # macOS
+
 ```
 
 ### 2. Basic Usage
@@ -59,7 +57,7 @@ print(f"Recovered: {message}")
 
 ### 3. Run Demo
 ```bash
-python example_usage.py  # Full demonstration
+python example_usage.py  
 ```
 
 ## 🔧 Technical Specifications
@@ -112,14 +110,6 @@ python example_usage.py  # Full demonstration
 - **Natural motion patterns** for embedding location selection
 - **Psychovisual masking** hides changes from human perception
 
-## 🎯 Use Cases
-
-### Legitimate Applications
-- **Digital Watermarking** - Copyright protection for videos
-- **Covert Communication** - Secure message transmission
-- **Data Authentication** - Verify video integrity
-- **Forensic Analysis** - Track video provenance
-- **Research** - Academic studies in multimedia security
 
 ### Technical Requirements
 - **Input Format**: Any FFmpeg-supported format (MP4, AVI, MOV, etc.)
@@ -142,9 +132,6 @@ python example_usage.py  # Full demonstration
 - **Optimal Setting**: Threshold = 20 (validated in research)
 
 ## 🔍 Research Validation
-
-This implementation reproduces results from the original research paper:
-
 ### Quality Metrics (from paper)
 - **Mean PSNR**: 50+ dB across test videos
 - **MARE**: < 0.05 (Mean Absolute Reconstruction Error)
@@ -155,13 +142,6 @@ This implementation reproduces results from the original research paper:
 - **Bit Error Rate**: < 0.3 for most test scenarios
 - **Message Recovery**: 94%+ success rate after compression
 
-## 🛠️ Development Notes
-
-### Architecture
-- **Object-oriented design** with clear separation of concerns
-- **Modular implementation** allowing easy customization
-- **Error handling** for robust operation
-- **Comprehensive logging** for debugging
 
 ### Dependencies
 - **NumPy** - Numerical computations and array operations
@@ -169,42 +149,6 @@ This implementation reproduces results from the original research paper:
 - **Pillow (PIL)** - Image processing and frame handling
 - **FFmpeg** - Video encoding/decoding (system dependency)
 
-### Extensibility
-- **Custom thresholds** - Adjustable psychovisual parameters
-- **Multiple formats** - Support for various video codecs
-- **Quality analysis** - Built-in PSNR calculation
-- **Batch processing** - Handle multiple videos
-
-## 🔬 Academic Citation
-
-If you use this implementation in academic research, please cite:
-
-```bibtex
-@article{fuad2020video,
-  title={Video steganography based on DCT psychovisual and object motion},
-  author={Fuad, Muhammad and Ernawan, Ferda},
-  journal={Bulletin of Electrical Engineering and Informatics},
-  volume={9},
-  number={3},
-  pages={1015--1023},
-  year={2020},
-  doi={10.11591/eei.v9i3.1859}
-}
-```
-
-## 🚨 Important Disclaimers
-
-### Legal Considerations
-- Use only for legitimate purposes (research, education, authorized testing)
-- Respect copyright laws and intellectual property rights
-- Do not use for malicious or illegal activities
-- Consider privacy implications of hidden communications
-
-### Technical Limitations
-- **Video Content Dependency** - Requires motion for good capacity
-- **Compression Sensitivity** - Heavy compression may degrade messages
-- **Processing Time** - Not suitable for real-time applications
-- **Format Constraints** - Best results with high-quality input videos
 
 ## 🆘 Troubleshooting
 
@@ -213,8 +157,6 @@ If you use this implementation in academic research, please cite:
 **FFmpeg Not Found**
 ```bash
 # Install FFmpeg first
-sudo apt install ffmpeg  # Linux
-brew install ffmpeg       # macOS
 # Download from https://ffmpeg.org for Windows
 ```
 
@@ -228,26 +170,6 @@ brew install ffmpeg       # macOS
 - Check if video was compressed after embedding
 - Try processing more frames
 
-## 📞 Support
 
-### Getting Help
-1. Check **DOCUMENTATION.md** for detailed technical information
-2. Run **example_usage.py** to verify your installation
-3. Review error messages and stack traces
-4. Test with sample videos first
 
-### Known Working Configurations
-- **Ubuntu 20.04** + Python 3.8 + FFmpeg 4.2
-- **macOS Big Sur** + Python 3.9 + FFmpeg 4.4  
-- **Windows 10** + Python 3.9 + FFmpeg 4.4
 
-## 📝 Version History
-
-- **v1.0** - Initial implementation based on research paper
-- Includes all core features: embedding, extraction, quality analysis
-- Comprehensive documentation and examples
-- Validated against research paper results
-
----
-
-*This implementation was created for research and educational purposes. The original research was conducted by Muhammad Fuad and Ferda Ernawan at Universiti Malaysia Pahang.*
