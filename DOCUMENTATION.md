@@ -73,6 +73,7 @@ if D[pos1] < D[pos2]:
 else:
     extracted_bits += '0'
 
+
 # Motion vector magnitude calculation  
 diff = block1 - block2
 motion_magnitude = np.sqrt(np.sum(diff**2))
